@@ -6,7 +6,7 @@
 /*   By: dlesieur <dlesieur@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/25 01:02:10 by dyl-syzygy        #+#    #+#             */
-/*   Updated: 2025/01/26 21:24:31 by dlesieur         ###   ########.fr       */
+/*   Updated: 2025/03/23 07:57:22 by dlesieur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@
  */
 int	ft_toupper(int c)
 {
-	if (c >= 'a' && c <= 'z')
+	if (ft_islower(c))
 		return (c - ('a' - 'A'));
 	return (c);
 }

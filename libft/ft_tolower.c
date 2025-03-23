@@ -6,7 +6,7 @@
 /*   By: dlesieur <dlesieur@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/17 18:18:11 by dlesieur          #+#    #+#             */
-/*   Updated: 2025/01/26 21:24:09 by dlesieur         ###   ########.fr       */
+/*   Updated: 2025/03/23 07:57:14 by dlesieur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@
  */
 int	ft_tolower(int c)
 {
-	if (c >= 'A' && c <= 'Z')
+	if (ft_isupper(c))
 		return (c + ('a' - 'A'));
 	return (c);
 }
