@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_width_int.c                                     :+:      :+:    :+:   */
+/*   ft_width_int_bonus.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dlesieur <dlesieur@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 12:50:21 by dyl-syzygy        #+#    #+#             */
-/*   Updated: 2025/03/23 05:21:57 by dlesieur         ###   ########.fr       */
+/*   Updated: 2025/03/23 23:34:51 by dlesieur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/ft_printf.h"
+#include "../../include/ft_printf_bonus.h"
 
 /**
  * @brief Calculate the length of the sign character

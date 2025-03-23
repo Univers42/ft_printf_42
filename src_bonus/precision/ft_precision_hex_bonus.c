@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_precision_hex.c                                 :+:      :+:    :+:   */
+/*   ft_precision_hex_bonus.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dlesieur <dlesieur@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/23 06:16:36 by dlesieur          #+#    #+#             */
-/*   Updated: 2025/03/23 06:16:38 by dlesieur         ###   ########.fr       */
+/*   Updated: 2025/03/23 23:34:37 by dlesieur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/ft_printf.h"
+#include "../../include/ft_printf_bonus.h"
 
 /**
  * Applies precision to hexadecimal number printing

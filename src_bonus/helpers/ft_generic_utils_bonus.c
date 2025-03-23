@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   generic_utils.c                                    :+:      :+:    :+:   */
+/*   ft_generic_utils_bonus.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dlesieur <dlesieur@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/22 23:28:30 by syzygy            #+#    #+#             */
-/*   Updated: 2025/03/23 05:24:07 by dlesieur         ###   ########.fr       */
+/*   Updated: 2025/03/23 23:34:13 by dlesieur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/ft_printf.h"
+#include "../../include/ft_printf_bonus.h"
 
 /**
  * Prints a single character and returns 1

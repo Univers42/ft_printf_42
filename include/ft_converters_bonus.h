@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_converters.h                                    :+:      :+:    :+:   */
+/*   ft_converters_bonus.h                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dlesieur <dlesieur@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/03 15:09:32 by dyl-syzygy        #+#    #+#             */
-/*   Updated: 2025/03/23 23:28:54 by dlesieur         ###   ########.fr       */
+/*   Updated: 2025/03/23 23:40:28 by dlesieur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_CONVERTERS_H
-# define FT_CONVERTERS_H
+#ifndef FT_CONVERTERS_BONUS_H
+# define FT_CONVERTERS_BONUS_H
 
 # include <stddef.h>
-# include "ft_printf.h"
+# include "ft_printf_bonus.h"
 
 /* Define t_size for platform-independent type handling */
 typedef unsigned long	t_size;

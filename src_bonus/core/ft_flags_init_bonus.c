@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_flags_init.c                                    :+:      :+:    :+:   */
+/*   ft_flags_init_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dlesieur <dlesieur@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/17 14:24:20 by dyl-syzygy        #+#    #+#             */
-/*   Updated: 2025/03/23 06:15:10 by dlesieur         ###   ########.fr       */
+/*   Updated: 2025/03/23 23:33:37 by dlesieur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/ft_printf.h"
+#include "../../include/ft_printf_bonus.h"
 
 /**
  * Initialize flags structure with default values.

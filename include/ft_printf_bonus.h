@@ -1,24 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_printf_bonus.h                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dlesieur <dlesieur@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/02 00:48:53 by dyl-syzygy        #+#    #+#             */
-/*   Updated: 2025/03/23 06:06:59 by dlesieur         ###   ########.fr       */
+/*   Updated: 2025/03/23 23:39:57 by dlesieur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#ifndef FT_PRINTF_BONUS_H
+# define FT_PRINTF_BONUS_H
 
 # include <stdarg.h>
 # include <unistd.h>
-# include "ft_types.h"
+# include "ft_types_bonus.h"
 # include "../libft/libft.h"
-# include "ft_converters.h"
-# include "structs.h"
+# include "ft_converters_bonus.h"
+# include "structs_bonus.h"
 /**
  * ════════════════════════════════════════════════════════════════════════════
  * ║                              CORE FUNCTIONS                              ║

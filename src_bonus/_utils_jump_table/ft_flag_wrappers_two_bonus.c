@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_flag_wrappers_two.c                             :+:      :+:    :+:   */
+/*   ft_flag_wrappers_two_bonus.c                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dlesieur <dlesieur@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/22 20:00:00 by syzygy            #+#    #+#             */
-/*   Updated: 2025/03/23 05:17:26 by dlesieur         ###   ########.fr       */
+/*   Updated: 2025/03/23 23:33:32 by dlesieur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/ft_printf.h"
+#include "../../include/ft_printf_bonus.h"
 
 /**
  * Sets the plus flag in the given flags structure and clears the space flag.
