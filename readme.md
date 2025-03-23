@@ -77,3 +77,36 @@
   Actual:    "0x7ffd227f0290······" (ret: 20)
   Note:      Difference in handling sign flags with pointers is platform-specific
   Pointer:   0x7ffd227f0290
+
+
+  [INFO] Lone percent
+  Format:    "%"
+  Expected:  """ (ret: 0)"
+  Actual:    ""%" (ret: 1)"
+  Note:      Edge case behavior may vary by implementation
+[PASS] Double dot
+[INFO] Just minus
+  Format:    "%-"
+  Expected:  """ (ret: 0)"
+  Actual:    ""%-" (ret: 2)"
+  Note:      Edge case behavior may vary by implementation
+[INFO] Just plus
+  Format:    "%+"
+  Expected:  """ (ret: 0)"
+  Actual:    ""%+" (ret: 2)"
+  Note:      Edge case behavior may vary by implementation
+[INFO] Just hash
+  Format:    "%#"
+  Expected:  """ (ret: 0)"
+  Actual:    ""%#" (ret: 2)"
+  Note:      Edge case behavior may vary by implementation
+[INFO] Just zero
+  Format:    "%0"
+  Expected:  """ (ret: 0)"
+  Actual:    ""%0" (ret: 2)"
+  Note:      Edge case behavior may vary by implementation
+[INFO] Just space
+  Format:    "% "
+  Expected:  """ (ret: 0)"
+  Actual:    ""%·" (ret: 2)"
+  Note:      Edge case behavior may vary by implementation
