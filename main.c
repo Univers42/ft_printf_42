@@ -59,7 +59,10 @@ int main(void)
     ft_printf("Hex Lower: %x, Hex Upper: %X, Percent: %%\n", (unsigned int)3735928559, (unsigned int)3735928559);
     printf("Hex Lower: %x, Hex Upper: %X, Percent: %%\n", (unsigned int)3735928559, (unsigned int)3735928559);
 
+    printf("%-16p\n", &var);
+    ft_printf("% 16p\n", &var);
     char *null_str = NULL;
     ft_printf("Null string: %s\n", null_str);
     printf("Null string: %s\n", null_str);
+    printf("%+08.2p", &var);
 }
