@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_converters.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: syzygy <syzygy@student.42.fr>              +#+  +:+       +#+        */
+/*   By: dlesieur <dlesieur@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/03 15:09:32 by dyl-syzygy        #+#    #+#             */
-/*   Updated: 2025/03/23 23:16:53 by syzygy           ###   ########.fr       */
+/*   Updated: 2025/03/23 23:28:54 by dlesieur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 # define FT_CONVERTERS_H
 
 # include <stddef.h>
-# include "ft_types.h"
 # include "ft_printf.h"
 
 /* Define t_size for platform-independent type handling */
