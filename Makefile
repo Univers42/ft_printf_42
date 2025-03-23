@@ -6,7 +6,7 @@
 #    By: dlesieur <dlesieur@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/03/23 06:14:30 by dlesieur          #+#    #+#              #
-#    Updated: 2025/03/23 06:19:12 by dlesieur         ###   ########.fr        #
+#    Updated: 2025/03/23 06:39:05 by dlesieur         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@
 NAME			=	libftprintf.a
 
 CC				=	gcc
-CFLAGS			=	-Wall -Wextra -g3 -O0
+CFLAGS			=	-Wall -Werror -Wextra -g3 -O0
 AR				=	ar
 ARFLAGS 		=	rcs
 RM				=	rm -rf
