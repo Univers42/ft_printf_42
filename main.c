@@ -1,6 +1,5 @@
 #include "ft_printf.h"
 
-
 int main(void)
 {
     // Test %c: Character output

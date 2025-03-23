@@ -6,7 +6,7 @@
 /*   By: dlesieur <dlesieur@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/23 07:38:59 by dlesieur          #+#    #+#             */
-/*   Updated: 2025/03/23 08:56:46 by dlesieur         ###   ########.fr       */
+/*   Updated: 2025/03/23 14:05:06 by dlesieur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ void ft_printf_percent(void)
     ft_putchar_fd('%', STDOUT_FILENO);
 }
 
-void ft_printf(const char *format, ...)
+int ft_printf(const char *format, ...)
 {
     va_list args;
     
@@ -71,4 +71,5 @@ void ft_printf(const char *format, ...)
         format++;
     }
     va_end(args);
+    return (i);
 }

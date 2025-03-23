@@ -6,7 +6,7 @@
 /*   By: dlesieur <dlesieur@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/23 07:31:03 by dlesieur          #+#    #+#             */
-/*   Updated: 2025/03/23 08:53:32 by dlesieur         ###   ########.fr       */
+/*   Updated: 2025/03/23 12:52:48 by dlesieur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,6 @@ void ft_printf_u(unsigned int n)
 {
     char *str;
 
-    str = ft_itoa(n);
+    str = ft_utoa(n);
     ft_putstr_fd(str, STDOUT_FILENO);
 }

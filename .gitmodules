@@ -1,0 +1,7 @@
+[submodule "ft_printf_tester"]
+	path = ft_printf_tester
+	url = git@github.com/Univers42/ft_printf_tester.git
+
+[submodule "libft"]
+	path = libft
+	url = git@github.com/Univers42/libft.git
