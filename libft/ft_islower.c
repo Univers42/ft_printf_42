@@ -6,13 +6,13 @@
 /*   By: dlesieur <dlesieur@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/23 07:53:39 by dlesieur          #+#    #+#             */
-/*   Updated: 2025/03/23 07:56:10 by dlesieur         ###   ########.fr       */
+/*   Updated: 2025/03/23 08:02:55 by dlesieur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "include/ft_printf.h"
+#include "libft.h"
 
-int ft_islower(int c)
+int	ft_islower(int c)
 {
 	return (c >= 'a' && c <= 'z');
 }

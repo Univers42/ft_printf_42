@@ -6,15 +6,15 @@
 /*   By: dlesieur <dlesieur@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/17 16:11:01 by dlesieur          #+#    #+#             */
-/*   Updated: 2025/01/27 21:29:33 by dlesieur         ###   ########.fr       */
+/*   Updated: 2025/03/23 08:52:10 by dlesieur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_len(int n)
+static int ft_len(int n)
 {
-	size_t	count;
+	size_t count;
 
 	count = 0;
 	if (n <= 0)
@@ -36,10 +36,10 @@ static int	ft_len(int n)
  * 
  * @note The returned string must be freed by the caller to avoid memory leaks.
  */
-char	*ft_itoa(int n)
+char *ft_itoa(int n)
 {
-	char	*ptr;
-	int		len;
+	char *ptr;
+	int len;
 
 	len = ft_len(n);
 	ptr = malloc(len + 1);
@@ -49,13 +49,13 @@ char	*ft_itoa(int n)
 	if (n == 0)
 		*ptr = '0';
 	else if (n < 0)
+	{
 		*ptr = '-';
+		n = -n;
+	}
 	while (n)
 	{
-		if (n < 0)
-			*(ptr + --len) = (~(n % 10) + 1) + 48;
-		else
-			*(ptr + --len) = (n % 10) + 48;
+		*(ptr + --len) = (n % 10) + '0';
 		n /= 10;
 	}
 	return (ptr);

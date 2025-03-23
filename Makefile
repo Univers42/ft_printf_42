@@ -6,7 +6,7 @@
 #    By: dlesieur <dlesieur@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/03/23 06:14:30 by dlesieur          #+#    #+#              #
-#    Updated: 2025/03/23 06:39:05 by dlesieur         ###   ########.fr        #
+#    Updated: 2025/03/23 06:51:30 by dlesieur         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -148,7 +148,7 @@ $(OBJ_SUBDIRS):
 	@mkdir -p $@
 
 # ----- Compile C Files to Objects ----- #
-$(OBJ_DIR)/%.o: $(SRC_DIR)/%.c | $(OBJ_SUBDIRS)
+$(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
 	@printf "$(BCYAN)[COMPILING]$(RESET) $<\n"
 	@$(CC) $(CFLAGS) -I $(INCLUDE_DIR) -c $< -o $@
 

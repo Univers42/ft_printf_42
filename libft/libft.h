@@ -6,7 +6,7 @@
 /*   By: dlesieur <dlesieur@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/17 14:38:48 by dlesieur          #+#    #+#             */
-/*   Updated: 2025/03/23 08:00:12 by dlesieur         ###   ########.fr       */
+/*   Updated: 2025/03/23 08:27:46 by dlesieur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,7 @@ int		ft_isspace(int c);
 //int	ft_atoi_base(const char *str, int base);
 int		ft_isupper(int c);
 int		ft_islower(int c);
+char	*ft_itoa_base(t_size n, int base);
 
 // =============== MATH function ======================
 //int		ft_abs(int n);
@@ -91,6 +92,7 @@ int		ft_strncmp(const char *s1, const char *s2, t_size n);
 char	*ft_strnstr(const char *big, const char *little, t_size len);
 char	*ft_strdup(const char *s);
 char	*ft_strtoupper(char *str);
+char	*ft_strrev(char *str);
 //==============	Bonus linked list prototype 	============== 9
 
 t_list	*ft_lstnew(void *content);
