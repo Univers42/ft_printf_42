@@ -6,11 +6,12 @@
 /*   By: dlesieur <dlesieur@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/23 08:16:34 by dlesieur          #+#    #+#             */
-/*   Updated: 2025/03/23 08:47:57 by dlesieur         ###   ########.fr       */
+/*   Updated: 2025/03/23 21:36:31 by dlesieur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 static void	ft_get_digits(t_size n, int base, char *str, int *i)
 {
 	int	mod;
@@ -26,7 +27,6 @@ static void	ft_get_digits(t_size n, int base, char *str, int *i)
 	}
 	str[*i] = '\0';
 }
-
 
 char	*ft_itoa_base(t_size n, int base)
 {
