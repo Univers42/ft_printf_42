@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi_base.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dlesieur <dlesieur@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: syzygy <syzygy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/28 20:09:31 by dyl-syzygy        #+#    #+#             */
-/*   Updated: 2025/03/23 06:09:44 by dlesieur         ###   ########.fr       */
+/*   Updated: 2025/03/23 14:22:09 by syzygy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,9 +33,9 @@
 //{
 //	if (base <= 10)
 //		return (c >= '0' && c <= '9');
-//	return ((c >= '0' && c <= '9') || (c >= 'A' && c <= ('A' + base - 10)) || \
+//	return ((c >= '0' && c <= '9') || (c >= 'A' && c <= ('A' + base - 10)) ||
 //	(c >= 'a' && c <= ('a' + base - 10)));
-//}
+//} 
 //
 //int	ft_atoi_base(const char *str, int base)
 //{
@@ -48,7 +48,7 @@
 //		return (0);
 //	nbr = 0;
 //	sign = 1;
-//	while (str[i] == '\t' || str[i] == '\v' || str[i] == '\n' || \
+//	while (str[i] == '\t' || str[i] == '\v' || str[i] == '\n' ||
 //		str[i] == ' ' || str[i] == '\r' || str[i] == '\f')
 //		i += 1;
 //	if (str[i] == '-' || str[i] == '+')

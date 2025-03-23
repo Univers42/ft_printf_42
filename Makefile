@@ -1,5 +1,5 @@
 NAME			=	libftprintf.a
-BONUS_NAME		=	libprintf_bonus.a
+BONUS_NAME		=	libftprintf_bonus.a
 
 CC				=	gcc
 CFLAGS			=	-Wall -Werror -Wextra -g3 -O0
@@ -100,15 +100,14 @@ $(NAME): $(OBJS) | $(LIBFT)
 	@printf "$(BGREEN)$(BOLD)✓ $(NAME) created successfully$(RESET)\n"
 
 # ----- Bonus Target ----- #
-bonus: $(BONUS_NAME)
-
-$(BONUS_NAME): $(OBJS_BONUS) | $(LIBFT)
+bonus: $(OBJS_BONUS) | $(LIBFT)
 	@printf "\n$(BBLUE)╔══════════════════════════════════════════════════════════════════╗$(RESET)\n"
-	@printf "$(BBLUE)║$(RESET) $(BMAGENTA)Creating $(BONUS_NAME)...$(RESET)                                    $(BBLUE)║$(RESET)\n"
+	@printf "$(BBLUE)║$(RESET) $(BMAGENTA)Creating bonus version into $(NAME)...$(RESET)                    $(BBLUE)║$(RESET)\n"
 	@printf "$(BBLUE)╚══════════════════════════════════════════════════════════════════╝$(RESET)\n"
-	@cp $(LIBFT) $(BONUS_NAME)
-	@$(AR) $(ARFLAGS) $(BONUS_NAME) $(OBJS_BONUS) > /dev/null
-	@printf "$(BGREEN)$(BOLD)✓ $(BONUS_NAME) created successfully$(RESET)\n"
+	@cp $(LIBFT) $(NAME)
+	@$(AR) $(ARFLAGS) $(NAME) $(OBJS_BONUS) > /dev/null
+	@cp $(NAME) $(BONUS_NAME)
+	@printf "$(BGREEN)$(BOLD)✓ $(NAME) with bonus features created successfully$(RESET)\n"
 
 # ----- Run Target ----- #
 run: all
@@ -118,7 +117,7 @@ run: all
 
 run_bonus: bonus
 	@mkdir -p $(BUILD_DIR)
-	@$(CC) $(CFLAGS) -I $(INCLUDE_DIR) main.c $(BONUS_NAME) -o $(BUILD_DIR)/outDebugBonus
+	@$(CC) $(CFLAGS) -I $(INCLUDE_DIR) main.c $(NAME) -o $(BUILD_DIR)/outDebugBonus
 	@printf "$(BGREEN)Bonus executable created at $(UNDERLINE)$(BUILD_DIR)/outDebugBonus$(RESET)\n"
 
 # ----- Create Object Directories ----- #
