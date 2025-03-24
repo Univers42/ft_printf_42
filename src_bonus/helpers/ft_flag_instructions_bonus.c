@@ -6,14 +6,14 @@
 /*   By: dlesieur <dlesieur@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/19 12:30:00 by dyl-syzygy        #+#    #+#             */
-/*   Updated: 2025/03/23 23:34:10 by dlesieur         ###   ########.fr       */
+/*   Updated: 2025/03/24 23:16:03 by dlesieur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../include/ft_printf_bonus.h"
 
 /* Helper for left-aligned zero with sign */
-static int	ft_handle_zero_left_sign(t_flags flags)
+int	ft_handle_zero_left_sign(t_flags flags)
 {
 	int	count;
 

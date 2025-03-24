@@ -101,7 +101,7 @@ bonus:
 # ----- Library Creation based on build type ----- #
 ifeq ($(BONUS_BUILD), 1)
 # Bonus version
-$(NAME): $(OBJS_BONUS) | $(LIBFT)
+$(NAME): $(LIBFT) | $(OBJS_BONUS)
 	@printf "\n$(BBLUE)╔══════════════════════════════════════════════════════════════════╗$(RESET)\n"
 	@printf "$(BBLUE)║$(RESET) $(BMAGENTA)Creating bonus version into $(NAME)...$(RESET)                    $(BBLUE)║$(RESET)\n"
 	@printf "$(BBLUE)╚══════════════════════════════════════════════════════════════════╝$(RESET)\n"
@@ -109,6 +109,7 @@ $(NAME): $(OBJS_BONUS) | $(LIBFT)
 	@$(AR) $(ARFLAGS) $(NAME) $(OBJS_BONUS) > /dev/null
 	@printf "$(BGREEN)$(BOLD)✓ $(NAME) with bonus features created successfully$(RESET)\n"
 else
+
 # Standard version
 $(NAME): $(OBJS) | $(LIBFT)
 	@printf "\n$(BBLUE)╔══════════════════════════════════════════════════════════════════╗$(RESET)\n"

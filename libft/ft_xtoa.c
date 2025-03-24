@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_xtoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dyl-syzygy <dyl-syzygy@student.42.fr>      +#+  +:+       +#+        */
+/*   By: dlesieur <dlesieur@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/17 16:21:32 by dyl-syzygy        #+#    #+#             */
-/*   Updated: 2025/03/17 13:33:20 by dyl-syzygy       ###   ########.fr       */
+/*   Updated: 2025/03/24 23:19:36 by dlesieur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ static size_t	ft_xtoa_len(unsigned long num)
 /**
  * Converts a number to hexadecimal string representation
  */
-static char	*ft_hex_to_str(unsigned long int num, char *str, size_t len)
+char	*ft_hex_to_str(unsigned long int num, char *str, size_t len)
 {
 	int		mod;
 

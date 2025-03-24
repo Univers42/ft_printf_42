@@ -6,13 +6,13 @@
 /*   By: dlesieur <dlesieur@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/02 00:50:18 by syzygy            #+#    #+#             */
-/*   Updated: 2025/03/23 23:33:50 by dlesieur         ###   ########.fr       */
+/*   Updated: 2025/03/24 23:16:16 by dlesieur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../include/ft_printf_bonus.h"
 
-static int	ft_print_hex_zero(unsigned int num, t_flags flags, int uppercase)
+int	ft_print_hex_zero(unsigned int num, t_flags flags, int uppercase)
 {
 	if (flags.flags_bits & DOT_FLAG)
 		return (ft_print_hex_zero_with_dot(num, flags, uppercase));
