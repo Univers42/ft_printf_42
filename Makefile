@@ -2,7 +2,10 @@
 NAME			=	libftprintf.a
 BONUS_BUILD		=	0
 CC				=	gcc
-CFLAGS			=	-Wall -Werror -Wextra -g3 -O0 -fsanitize=address,undefined -fno-omit-frame-pointer -Wpedantic -Wshadow -Wundef -Wformat=2 -Wcast-align -Wconversion -Wsign-conversion -Wnull-dereference -Wdouble-promotion
+CFLAGS 			= 	-Wall -Werror -Wextra -g3 -O0 -fno-omit-frame-pointer -Wpedantic -Wshadow -Wundef -Wformat=2 -Wcast-align
+# Option 2: Thread Sanitizer (for threading issues)
+# CFLAGS = -Wall -Werror -Wextra -g3 -O0 -fsanitize=thread -fno-omit-frame-pointer \
+#          -Wpedantic -Wshadow -Wundef -Wformat=2 -Wcast-align
 AR				=	ar
 ARFLAGS 		=	rcs
 RM				=	rm -rf
@@ -149,7 +152,7 @@ $(LIBFT):
 	@printf "\n$(BMAGENTA)╔══════════════════════════════════════════════════════════════════╗$(RESET)\n"
 	@printf "$(BMAGENTA)║$(RESET) Building libft...                                       $(BMAGENTA)         ║$(RESET)\n"
 	@printf "$(BMAGENTA)╚══════════════════════════════════════════════════════════════════╝$(RESET)\n"
-	@$(MAKE) -C $(LIBFT_DIR) --no-print-directory > /dev/null
+	@$(MAKE) -C $(LIBFT_DIR) CFLAGS="$(CFLAGS)" --no-print-directory > /dev/null
 	@printf "$(BGREEN)✓ libft compiled$(RESET)\n"
 
 # ----- Clean Object Files ----- #

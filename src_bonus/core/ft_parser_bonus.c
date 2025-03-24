@@ -6,7 +6,7 @@
 /*   By: dlesieur <dlesieur@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/03 14:33:45 by dyl-syzygy        #+#    #+#             */
-/*   Updated: 2025/03/24 21:36:14 by dlesieur         ###   ########.fr       */
+/*   Updated: 2025/03/24 22:11:21 by dlesieur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,7 @@ static int	ft_parse_flags(const char *format, int i, t_flags *flags,
 		{
 			flags->precision = va_arg(args, int);
 			if (flags->precision < 0)
-				flags->flags_bits &= (unsigned int)~DOT_FLAG;
+				flags->flags_bits &= (unsigned int) ~DOT_FLAG;
 			i++;
 			continue ;
 		}

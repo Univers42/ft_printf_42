@@ -6,7 +6,7 @@
 /*   By: dlesieur <dlesieur@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/02 00:48:53 by dyl-syzygy        #+#    #+#             */
-/*   Updated: 2025/03/24 22:00:43 by dlesieur         ###   ########.fr       */
+/*   Updated: 2025/03/24 22:12:26 by dlesieur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -111,8 +111,8 @@ int		ft_print_ptr_hex(t_size n);
  * ════════════════════════════════════════════════════════════════════════════
  */
 
+t_ssize	ft_print_hex_prefix(int uppercase);
 int		ft_print_c(char c);
-t_ssize		ft_print_hex_prefix(int uppercase);
 int		ft_print_sign(int n, t_flags flags);
 int		ft_print_unsigned_nbr(unsigned int n);
 int		ft_calc_sign_len(int n, t_flags flags);

@@ -6,7 +6,7 @@
 /*   By: dlesieur <dlesieur@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/23 06:16:18 by dlesieur          #+#    #+#             */
-/*   Updated: 2025/03/24 21:48:09 by dlesieur         ###   ########.fr       */
+/*   Updated: 2025/03/24 22:11:48 by dlesieur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,6 @@ static void	init_flag_table(t_lookup_tables *tables)
 	funcs[5] = handle_plus;
 	funcs[6] = handle_star;
 	funcs[7] = NULL;
-	
 	i = 0;
 	while (flags[i])
 	{
