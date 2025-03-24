@@ -1,5 +1,5 @@
 NAME			=	libftprintf.a
-
+BONUS_NAME		=	libftprintf_bonus.a
 CC				=	gcc
 CFLAGS			=	-Wall -Werror -Wextra -g3 -O0
 AR				=	ar
@@ -54,6 +54,7 @@ define COLORS
 	BLINK       = \033[5m
 	REVERSE     = \033[7m
 	HIDDEN      = \033[8m
+
 endef
 
 $(eval $(COLORS))
