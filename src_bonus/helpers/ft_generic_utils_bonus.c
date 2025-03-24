@@ -6,7 +6,7 @@
 /*   By: dlesieur <dlesieur@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/22 23:28:30 by syzygy            #+#    #+#             */
-/*   Updated: 2025/03/23 23:34:13 by dlesieur         ###   ########.fr       */
+/*   Updated: 2025/03/24 21:56:27 by dlesieur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int	ft_print_c(char c)
  * @return The number of digits
  * @note  
  */
-int	ft_nbr_len(unsigned long n, int base)
+int	ft_nbr_len(t_size n, int base)
 {
 	int	len;
 
@@ -37,7 +37,7 @@ int	ft_nbr_len(unsigned long n, int base)
 		return (1);
 	while (n > 0)
 	{
-		n /= base;
+		n /= (t_size)base;
 		len++;
 	}
 	return (len);

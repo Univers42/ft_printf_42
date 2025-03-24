@@ -1,21 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf_m.c                                      :+:      :+:    :+:   */
+/*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dlesieur <dlesieur@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/23 07:38:59 by dlesieur          #+#    #+#             */
-/*   Updated: 2025/03/23 19:35:11 by dlesieur         ###   ########.fr       */
+/*   Updated: 2025/03/24 21:31:40 by dlesieur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
 // Modified to return 1 (one character printed)
-int	ft_printf_c(char c)
+int	ft_printf_c(int c)
 {
-	return (ft_putchar_fd(c, STDOUT_FILENO), 1);
+	return (ft_putchar_fd((char)c, STDOUT_FILENO), 1);
 }
 
 // Modified to return string length
@@ -23,7 +23,7 @@ int	ft_printf_s(char *str)
 {
 	if (!str)
 		return (ft_putstr_fd("(null)", STDOUT_FILENO), 6);
-	return (ft_putstr_fd(str, STDOUT_FILENO), ft_strlen(str));
+	return (ft_putstr_fd(str, STDOUT_FILENO), (int)ft_strlen(str));
 }
 
 // Modified to return 1 (one character printed)

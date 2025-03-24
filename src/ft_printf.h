@@ -6,7 +6,7 @@
 /*   By: dlesieur <dlesieur@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/23 08:09:53 by dlesieur          #+#    #+#             */
-/*   Updated: 2025/03/23 18:26:03 by dlesieur         ###   ########.fr       */
+/*   Updated: 2025/03/24 21:30:32 by dlesieur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 
 int	ft_printf(const char *format, ...);
 int	ft_printf_d(int n);
-int	ft_printf_c(char c);
+int	ft_printf_c(int c);
 int	ft_printf_s(char *str);
 int	ft_printf_percent(void);
 int	ft_printf_p(void *p);

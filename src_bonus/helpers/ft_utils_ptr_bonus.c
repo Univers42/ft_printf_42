@@ -6,7 +6,7 @@
 /*   By: dlesieur <dlesieur@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/23 06:16:08 by dlesieur          #+#    #+#             */
-/*   Updated: 2025/03/23 23:34:23 by dlesieur         ###   ########.fr       */
+/*   Updated: 2025/03/24 21:59:52 by dlesieur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ int	ft_print_ptr_hex(unsigned long n)
 /**
  * Prints the hexadecimal prefix ("0x" or "0X")
  */
-int	ft_print_hex_prefix(int uppercase)
+t_ssize	ft_print_hex_prefix(int uppercase)
 {
 	if (uppercase)
 		return (write(1, "0X", 2));

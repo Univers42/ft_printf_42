@@ -6,7 +6,7 @@
 /*   By: dlesieur <dlesieur@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/16 23:50:00 by dyl-syzygy        #+#    #+#             */
-/*   Updated: 2025/03/23 23:34:35 by dlesieur         ###   ########.fr       */
+/*   Updated: 2025/03/24 22:01:32 by dlesieur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int	ft_print_strprec(const char *str, int precision)
 	if (!str)
 		str = "(null)";
 	if (precision < 0)
-		precision = ft_strlen(str);
+		precision = (int)ft_strlen(str);
 	while (str[i] && i < precision)
 	{
 		count += ft_print_c(str[i]);
@@ -69,7 +69,7 @@ void	get_print_info(const char *str, t_flags flags,
 		*print_str = str;
 	else
 		*print_str = "(null)";
-	*print_len = ft_strlen(*print_str);
+	*print_len = (int)ft_strlen(*print_str);
 	if ((flags.flags_bits & DOT_FLAG) && flags.precision < *print_len)
 		*print_len = flags.precision;
 }

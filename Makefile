@@ -1,7 +1,8 @@
+# Add the BONUS_BUILD variable at the top
 NAME			=	libftprintf.a
-BONUS_NAME		=	libftprintf_bonus.a
+BONUS_BUILD		=	0
 CC				=	gcc
-CFLAGS			=	-Wall -Werror -Wextra -g3 -O0
+CFLAGS			=	-Wall -Werror -Wextra -g3 -O0 -fsanitize=address,undefined -fno-omit-frame-pointer -Wpedantic -Wshadow -Wundef -Wformat=2 -Wcast-align -Wconversion -Wsign-conversion -Wnull-dereference -Wdouble-promotion
 AR				=	ar
 ARFLAGS 		=	rcs
 RM				=	rm -rf
@@ -90,7 +91,22 @@ LIBFT = $(LIBFT_DIR)/libft.a
 # ----- Default Target ----- #
 all: $(NAME)
 
-# ----- Library Creation (Standard) ----- #
+# ----- Bonus Target ----- #
+bonus:
+	@$(MAKE) BONUS_BUILD=1 $(NAME)
+
+# ----- Library Creation based on build type ----- #
+ifeq ($(BONUS_BUILD), 1)
+# Bonus version
+$(NAME): $(OBJS_BONUS) | $(LIBFT)
+	@printf "\n$(BBLUE)╔══════════════════════════════════════════════════════════════════╗$(RESET)\n"
+	@printf "$(BBLUE)║$(RESET) $(BMAGENTA)Creating bonus version into $(NAME)...$(RESET)                    $(BBLUE)║$(RESET)\n"
+	@printf "$(BBLUE)╚══════════════════════════════════════════════════════════════════╝$(RESET)\n"
+	@cp $(LIBFT) $(NAME)
+	@$(AR) $(ARFLAGS) $(NAME) $(OBJS_BONUS) > /dev/null
+	@printf "$(BGREEN)$(BOLD)✓ $(NAME) with bonus features created successfully$(RESET)\n"
+else
+# Standard version
 $(NAME): $(OBJS) | $(LIBFT)
 	@printf "\n$(BBLUE)╔══════════════════════════════════════════════════════════════════╗$(RESET)\n"
 	@printf "$(BBLUE)║$(RESET) $(BMAGENTA)Creating $(NAME)...$(RESET)                                        $(BBLUE)║$(RESET)\n"
@@ -98,16 +114,7 @@ $(NAME): $(OBJS) | $(LIBFT)
 	@cp $(LIBFT) $(NAME)
 	@$(AR) $(ARFLAGS) $(NAME) $(OBJS) > /dev/null
 	@printf "$(BGREEN)$(BOLD)✓ $(NAME) created successfully$(RESET)\n"
-
-# ----- Bonus Target ----- #
-bonus: $(OBJS_BONUS) | $(LIBFT)
-	@printf "\n$(BBLUE)╔══════════════════════════════════════════════════════════════════╗$(RESET)\n"
-	@printf "$(BBLUE)║$(RESET) $(BMAGENTA)Creating bonus version into $(NAME)...$(RESET)                    $(BBLUE)║$(RESET)\n"
-	@printf "$(BBLUE)╚══════════════════════════════════════════════════════════════════╝$(RESET)\n"
-	@cp $(LIBFT) $(NAME)
-	@$(AR) $(ARFLAGS) $(NAME) $(OBJS_BONUS) > /dev/null
-	@cp $(NAME) $(BONUS_NAME)
-	@printf "$(BGREEN)$(BOLD)✓ $(NAME) with bonus features created successfully$(RESET)\n"
+endif
 
 # ----- Run Target ----- #
 run: all
@@ -115,7 +122,8 @@ run: all
 	@$(CC) $(CFLAGS) -I $(INCLUDE_DIR) main.c $(NAME) -o $(BUILD_DIR)/outDebug
 	@printf "$(BGREEN)Executable created at $(UNDERLINE)$(BUILD_DIR)/outDebug$(RESET)\n"
 
-run_bonus: bonus
+run_bonus:
+	@$(MAKE) BONUS_BUILD=1 --no-print-directory
 	@mkdir -p $(BUILD_DIR)
 	@$(CC) $(CFLAGS) -I $(INCLUDE_DIR) main.c $(NAME) -o $(BUILD_DIR)/outDebugBonus
 	@printf "$(BGREEN)Bonus executable created at $(UNDERLINE)$(BUILD_DIR)/outDebugBonus$(RESET)\n"
@@ -175,8 +183,6 @@ fclean:
 	@$(RM) $(OBJ_BONUS_DIR) > /dev/null 2>&1 || true
 	@printf "$(RED)║  ↪ Removing $(NAME)                                     $(RED)║$(RESET)\n"
 	@$(RM) $(NAME) > /dev/null 2>&1 || true
-	@printf "$(RED)║  ↪ Removing $(BONUS_NAME)                                 $(RED)║$(RESET)\n"
-	@$(RM) $(BONUS_NAME) > /dev/null 2>&1 || true
 	@printf "$(RED)║  ↪ Removing executables                                       $(RED)║$(RESET)\n"
 	@$(RM) $(BUILD_DIR) > /dev/null 2>&1 || true
 	@printf "$(RED)║  ↪ Executing libft fclean                                     $(RED)║$(RESET)\n"
@@ -187,7 +193,8 @@ fclean:
 # ----- Rebuild ----- #
 re: fclean all
 
-re_bonus: fclean bonus
+re_bonus: fclean 
+	@$(MAKE) BONUS_BUILD=1 --no-print-directory
 
 # ----- Help ----- #
 help:
@@ -195,7 +202,7 @@ help:
 	@printf "$(BBLUE)║$(RESET) $(BMAGENTA)ft_printf Library - Available Commands$(RESET)                      $(BBLUE)║$(RESET)\n"
 	@printf "$(BBLUE)╠═════════════════════════════════════════════════════════════╣$(RESET)\n"
 	@printf "$(BBLUE)║$(RESET) $(BGREEN)make$(RESET)           - Build the mandatory library ($(NAME))$(BBLUE)║$(RESET)\n"
-	@printf "$(BBLUE)║$(RESET) $(BGREEN)make bonus$(RESET)     - Build the bonus library ($(BONUS_NAME))$(BBLUE)║$(RESET)\n"
+	@printf "$(BBLUE)║$(RESET) $(BGREEN)make bonus$(RESET)     - Build the bonus library ($(NAME))$(BBLUE)║$(RESET)\n"
 	@printf "$(BBLUE)║$(RESET) $(BGREEN)make run$(RESET)       - Build and run with mandatory version       $(BBLUE)║$(RESET)\n"
 	@printf "$(BBLUE)║$(RESET) $(BGREEN)make run_bonus$(RESET) - Build and run with bonus version           $(BBLUE)║$(RESET)\n"
 	@printf "$(BBLUE)║$(RESET) $(BGREEN)make clean$(RESET)     - Remove object files                        $(BBLUE)║$(RESET)\n"

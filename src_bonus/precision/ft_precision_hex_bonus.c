@@ -6,7 +6,7 @@
 /*   By: dlesieur <dlesieur@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/23 06:16:36 by dlesieur          #+#    #+#             */
-/*   Updated: 2025/03/23 23:34:37 by dlesieur         ###   ########.fr       */
+/*   Updated: 2025/03/24 21:43:41 by dlesieur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ int	ft_print_hex_precision(unsigned int num, int precision, int uppercase)
  * @param precision The minimum number of characters to print
  * @return Number of characters printed
  */
-int	ft_print_ptr_hex_precision(unsigned long n, int precision)
+int	ft_print_ptr_hex_precision(t_size n, int precision)
 {
 	int	count;
 	int	hex_len;

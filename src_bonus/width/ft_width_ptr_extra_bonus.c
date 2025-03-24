@@ -6,7 +6,7 @@
 /*   By: dlesieur <dlesieur@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/23 06:17:06 by dlesieur          #+#    #+#             */
-/*   Updated: 2025/03/23 23:34:56 by dlesieur         ###   ########.fr       */
+/*   Updated: 2025/03/24 22:05:07 by dlesieur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int	ft_print_ptr_right_zero(unsigned long n, t_flags flags, int hex_len)
 	int	count;
 
 	count = 0;
-	count += ft_print_hex_prefix(0);
+	count += (int)ft_print_hex_prefix(0);
 	count += ft_print_width(flags.width - 2, hex_len, 1);
 	count += ft_print_hex_value(n, 0);
 	return (count);
@@ -47,7 +47,7 @@ int	ft_print_ptr_right_std(unsigned long n, t_flags flags, int ptr_len)
 
 	count = 0;
 	count += ft_print_width(flags.width, ptr_len, 0);
-	count += ft_print_hex_prefix(0);
-	count += ft_print_ptr_hex_precision(n, flags.precision);
+	count += (int)ft_print_hex_prefix(0);
+	count += (int)ft_print_ptr_hex_precision(n, flags.precision);
 	return (count);
 }

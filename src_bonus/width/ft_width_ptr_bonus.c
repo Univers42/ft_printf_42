@@ -6,7 +6,7 @@
 /*   By: dlesieur <dlesieur@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/23 06:17:13 by dlesieur          #+#    #+#             */
-/*   Updated: 2025/03/23 23:34:53 by dlesieur         ###   ########.fr       */
+/*   Updated: 2025/03/24 22:03:29 by dlesieur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int	ft_print_null_ptr_left(t_flags flags)
 	int	count;
 
 	count = 0;
-	count += write(1, "(nil)", 5);
+	count += (int)write(1, "(nil)", 5);
 	if (flags.width > 5)
 		count += ft_print_width(flags.width, 5, 0);
 	return (count);
@@ -46,7 +46,7 @@ int	ft_print_null_ptr_right(t_flags flags)
 	count = 0;
 	if (flags.width > 5)
 		count += ft_print_width(flags.width, 5, 0);
-	count += write(1, "(nil)", 5);
+	count += (int)write(1, "(nil)", 5);
 	return (count);
 }
 
@@ -58,7 +58,7 @@ int	ft_print_ptr_left(unsigned long n, t_flags flags, int ptr_len)
 	int	count;
 
 	count = 0;
-	count += ft_print_hex_prefix(0);
+	count += (int)ft_print_hex_prefix(0);
 	count += ft_print_ptr_hex_precision(n, flags.precision);
 	count += ft_print_width(flags.width, ptr_len, 0);
 	return (count);

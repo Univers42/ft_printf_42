@@ -6,7 +6,7 @@
 /*   By: dlesieur <dlesieur@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/23 06:16:26 by dlesieur          #+#    #+#             */
-/*   Updated: 2025/03/23 23:34:31 by dlesieur         ###   ########.fr       */
+/*   Updated: 2025/03/24 22:01:11 by dlesieur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,7 @@ void	handle_minus(t_flags *flags, va_list args)
 {
 	(void)args;
 	set_flag_bit_internal('-', flags);
-	flags->flags_bits &= ~ZERO_FLAG;
+	flags->flags_bits &= (unsigned int)~ZERO_FLAG;
 }
 
 /**
@@ -99,6 +99,6 @@ void	handle_dot(t_flags *flags, va_list args)
 {
 	(void)args;
 	set_flag_bit_internal('.', flags);
-	flags->flags_bits &= ~ZERO_FLAG;
+	flags->flags_bits &= (unsigned int)~ZERO_FLAG;
 	flags->precision = 0;
 }

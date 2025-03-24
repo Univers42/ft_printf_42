@@ -6,7 +6,7 @@
 /*   By: dlesieur <dlesieur@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/02 00:48:53 by dyl-syzygy        #+#    #+#             */
-/*   Updated: 2025/03/23 23:39:57 by dlesieur         ###   ########.fr       */
+/*   Updated: 2025/03/24 22:00:43 by dlesieur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,9 +101,9 @@ int		ft_get_unsigned_len(unsigned int n, t_flags flags);
 int		ft_handle_zero_precision(int n, t_flags flags);
 int		ft_print_unsigned_precision(unsigned int n, int precision);
 int		ft_print_hex_precision(unsigned int num, int precision, int uppercase);
-int		ft_print_ptr_hex_precision(unsigned long n, int precision);
+int		ft_print_ptr_hex_precision(t_size n, int precision);
 int		ft_print_hex_value(t_size n, int uppercase);
-int		ft_print_ptr_hex(unsigned long n);
+int		ft_print_ptr_hex(t_size n);
 
 /**
  * ════════════════════════════════════════════════════════════════════════════
@@ -112,11 +112,11 @@ int		ft_print_ptr_hex(unsigned long n);
  */
 
 int		ft_print_c(char c);
-int		ft_print_hex_prefix(int uppercase);
+t_ssize		ft_print_hex_prefix(int uppercase);
 int		ft_print_sign(int n, t_flags flags);
 int		ft_print_unsigned_nbr(unsigned int n);
 int		ft_calc_sign_len(int n, t_flags flags);
-int		ft_nbr_len(unsigned long n, int base);
+int		ft_nbr_len(t_size n, int base);
 int		ft_handle_invalid_format(char type, t_flags flags);
 
 #endif

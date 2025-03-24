@@ -6,7 +6,7 @@
 /*   By: dlesieur <dlesieur@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/22 20:00:00 by syzygy            #+#    #+#             */
-/*   Updated: 2025/03/23 23:33:32 by dlesieur         ###   ########.fr       */
+/*   Updated: 2025/03/24 22:01:59 by dlesieur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	handle_plus(t_flags *flags, va_list args)
 {
 	(void)args;
 	set_flag_bit('+', flags);
-	flags->flags_bits &= ~SPACE_FLAG;
+	flags->flags_bits &= (unsigned int)~SPACE_FLAG;
 }
 
 /**

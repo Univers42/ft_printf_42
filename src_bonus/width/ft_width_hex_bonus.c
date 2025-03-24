@@ -6,7 +6,7 @@
 /*   By: dlesieur <dlesieur@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/17 14:15:25 by dyl-syzygy        #+#    #+#             */
-/*   Updated: 2025/03/23 23:34:48 by dlesieur         ###   ########.fr       */
+/*   Updated: 2025/03/24 22:02:53 by dlesieur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,7 +96,7 @@ int	ft_print_hex_left(unsigned int num, int hex_len,
 	if (flags.spec == 'X')
 		uppercase = 1;
 	if ((flags.flags_bits & HASH_FLAG) && num != 0)
-		count += ft_print_hex_prefix(uppercase);
+		count += (int)ft_print_hex_prefix(uppercase);
 	count += ft_print_hex_precision(num, flags.precision, uppercase);
 	count += ft_print_width(flags.width - prefix_len, hex_len, 0);
 	return (count);
@@ -139,14 +139,14 @@ int	ft_print_hex_right(unsigned int num, int hex_len,
 	if ((flags.flags_bits & ZERO_FLAG) && !(flags.flags_bits & DOT_FLAG))
 	{
 		if ((flags.flags_bits & HASH_FLAG) && num != 0)
-			count += ft_print_hex_prefix(uppercase);
+			count += (int)ft_print_hex_prefix(uppercase);
 		count += ft_print_width(flags.width - prefix_len, hex_len, 1);
 	}
 	else
 	{
 		count += ft_print_width(flags.width - prefix_len, hex_len, 0);
 		if ((flags.flags_bits & HASH_FLAG) && num != 0)
-			count += ft_print_hex_prefix(uppercase);
+			count += (int)ft_print_hex_prefix(uppercase);
 	}
 	count += ft_print_hex_precision(num, flags.precision, uppercase);
 	return (count);

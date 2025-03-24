@@ -6,7 +6,7 @@
 /*   By: dlesieur <dlesieur@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/16 21:01:37 by dyl-syzygy        #+#    #+#             */
-/*   Updated: 2025/03/23 23:33:27 by dlesieur         ###   ########.fr       */
+/*   Updated: 2025/03/24 22:01:43 by dlesieur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,6 @@ int	ft_convert_ptr(char type, t_flags flags, va_list args)
 	(void)type;
 	ptr = va_arg(args, void *);
 	if (!ptr && (flags.flags_bits & DOT_FLAG) && flags.precision == 0)
-		flags.flags_bits &= ~DOT_FLAG;
+		flags.flags_bits &= (unsigned int)~DOT_FLAG;
 	return (ft_print_ptr((unsigned long)ptr, flags));
 }

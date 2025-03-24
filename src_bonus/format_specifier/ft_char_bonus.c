@@ -6,7 +6,7 @@
 /*   By: dlesieur <dlesieur@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/02 00:50:58 by syzygy            #+#    #+#             */
-/*   Updated: 2025/03/23 23:33:46 by dlesieur         ###   ########.fr       */
+/*   Updated: 2025/03/24 21:36:33 by dlesieur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,13 +32,13 @@ int	ft_print_char(int c, t_flags flags)
 	count = 0;
 	if (flags.flags_bits & LEFT_FLAG)
 	{
-		count += ft_print_c(c);
+		count += ft_print_c((char)c);
 		count += ft_print_width(flags.width - 1, 0, 0);
 	}
 	else
 	{
 		count += ft_print_width(flags.width - 1, 0, 0);
-		count += ft_print_c(c);
+		count += ft_print_c((char)c);
 	}
 	return (count);
 }

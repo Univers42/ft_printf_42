@@ -6,7 +6,7 @@
 /*   By: dlesieur <dlesieur@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/02 00:50:23 by syzygy            #+#    #+#             */
-/*   Updated: 2025/03/23 23:33:52 by dlesieur         ###   ########.fr       */
+/*   Updated: 2025/03/24 21:41:22 by dlesieur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,9 +31,9 @@ int	ft_print_int(int n, t_flags flags)
 
 	count = 0;
 	if (n < 0)
-		unsigned_n = -n;
+		unsigned_n = (unsigned int)-n;
 	else
-		unsigned_n = n;
+		unsigned_n = (unsigned int)n;
 	num_len = ft_nbr_len(unsigned_n, BASE_DEC);
 	if ((flags.flags_bits & DOT_FLAG)
 		&& (flags.precision == 0 || flags.precision == -1) && n == 0)

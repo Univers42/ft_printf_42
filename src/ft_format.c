@@ -6,7 +6,7 @@
 /*   By: dlesieur <dlesieur@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/23 07:31:03 by dlesieur          #+#    #+#             */
-/*   Updated: 2025/03/23 19:29:44 by dlesieur         ###   ########.fr       */
+/*   Updated: 2025/03/24 21:25:44 by dlesieur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	ft_printf_p(void *p)
 	if (!str)
 		return (0);
 	(ft_putstr_fd("0x", STDOUT_FILENO), ft_putstr_fd(str, STDOUT_FILENO));
-	len = ft_strlen(str) + 2;
+	len = (int)ft_strlen(str) + 2;
 	return (free(str), len);
 }
 
@@ -36,7 +36,7 @@ int	ft_printf_x(unsigned int n)
 	if (!str)
 		return (0);
 	ft_putstr_fd(str, STDOUT_FILENO);
-	len = ft_strlen(str);
+	len = (int)ft_strlen(str);
 	return (free(str), len);
 }
 
@@ -49,7 +49,7 @@ int	ft_printf_upper_x(unsigned int n)
 	if (!str)
 		return (0);
 	(ft_strtoupper(str), ft_putstr_fd(str, STDOUT_FILENO));
-	len = ft_strlen(str);
+	len = (int)ft_strlen(str);
 	return (free(str), len);
 }
 
@@ -62,7 +62,7 @@ int	ft_printf_u(unsigned int n)
 	if (!str)
 		return (0);
 	ft_putstr_fd(str, STDOUT_FILENO);
-	len = ft_strlen(str);
+	len = (int)ft_strlen(str);
 	return (free(str), len);
 }
 
@@ -77,7 +77,7 @@ int	ft_printf_d(int n)
 	str = ft_itoa(n);
 	if (!str)
 		return (0);
-	len = ft_strlen(str);
+	len = (int)ft_strlen(str);
 	ft_putstr_fd(str, STDOUT_FILENO);
 	return (free(str), len);
 }

@@ -6,7 +6,7 @@
 /*   By: dlesieur <dlesieur@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/03 17:02:07 by dyl-syzygy        #+#    #+#             */
-/*   Updated: 2025/03/23 23:34:20 by dlesieur         ###   ########.fr       */
+/*   Updated: 2025/03/24 21:59:12 by dlesieur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ int	ft_print_unsigned_nbr(unsigned int n)
 	count = 0;
 	if (n >= BASE_DEC)
 		count += ft_print_unsigned_nbr(n / BASE_DEC);
-	count += ft_print_c('0' + (n % BASE_DEC));
+	count += ft_print_c((char)('0' + (n % BASE_DEC)));
 	return (count);
 }
 
