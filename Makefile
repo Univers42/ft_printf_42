@@ -18,7 +18,7 @@ OBJ_DIR			=	obj
 OBJ_BONUS_DIR	=	obj_bonus
 BUILD_DIR		=	build
 LIBFT_DIR		=	libft
-
+PROGRAM = program
 # Terminal Colors
 define COLORS
 	# Text Colors
@@ -126,6 +126,15 @@ run: all
 	@$(CC) $(CFLAGS) -I $(INCLUDE_DIR) main.c $(NAME) -o $(BUILD_DIR)/outDebug
 	@printf "$(BGREEN)Executable created at $(UNDERLINE)$(BUILD_DIR)/outDebug$(RESET)\n"
 
+compile_main: all
+	@if [ -f main.c ]; then \
+		printf "Handled gracefully if main.c exists\n"; \
+		printf "Now we compile the program.\n"; \
+		$(CC) $(CFLAGS) main.c -I $(INCLUDE_DIR) -L. -lftprintf -o program; \
+	else \
+		printf "I didn't encounter any 'main.c', make sure of the name.\n"; \
+	fi
+
 run_bonus:
 	@$(MAKE) BONUS_BUILD=1 --no-print-directory
 	@mkdir -p $(BUILD_DIR)
@@ -188,7 +197,7 @@ fclean:
 	@printf "$(RED)║  ↪ Removing $(NAME)                                     $(RED)║$(RESET)\n"
 	@$(RM) $(NAME) > /dev/null 2>&1 || true
 	@printf "$(RED)║  ↪ Removing executables                                       $(RED)║$(RESET)\n"
-	@$(RM) $(BUILD_DIR) > /dev/null 2>&1 || true
+	@$(RM) $(BUILD_DIR) $(PROGRAM) > /dev/null 2>&1 || true
 	@printf "$(RED)║  ↪ Executing libft fclean                                     $(RED)║$(RESET)\n"
 	@$(MAKE) -C $(LIBFT_DIR) fclean > /dev/null 2>&1 || true
 	@printf "$(RED)╚═══════════════════════════════════════════════════════════════╝$(RESET)\n\n"
