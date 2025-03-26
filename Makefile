@@ -1,23 +1,31 @@
 # Add the BONUS_BUILD variable at the top
-NAME			=	libftprintf.a
-BONUS_BUILD		=	0
-CC				=	gcc
-CFLAGS 			= 	-Wall -Werror -Wextra -g3 -O0 -fno-omit-frame-pointer -Wpedantic -Wshadow -Wundef -Wformat=2 -Wcast-align
+NAME					=	libftprintf.a
+BONUS_BUILD				=	0
+CC						=	gcc
+CFLAGS 					= 	-Wall -Werror -Wextra -g3 -O0 -fno-omit-frame-pointer -Wpedantic -Wshadow -Wundef -Wformat=2 -Wcast-align
 # Option 2: Thread Sanitizer (for threading issues)
 # CFLAGS = -Wall -Werror -Wextra -g3 -O0 -fsanitize=thread -fno-omit-frame-pointer \
 #          -Wpedantic -Wshadow -Wundef -Wformat=2 -Wcast-align
-AR				=	ar
-ARFLAGS 		=	rcs
-RM				=	rm -rf
+AR						=	ar
+ARFLAGS 				=	rcs
+RM						=	rm -rf
 
 # Directories
-SRC_DIR			=	src
-SRC_BONUS_DIR	=	src_bonus
-INCLUDE_DIR		=	include
-OBJ_DIR			=	obj
-OBJ_BONUS_DIR	=	obj_bonus
-BUILD_DIR		=	build
-LIBFT_DIR		=	libft
+SRC_DIR					=	src
+SRC_BONUS_DIR			=	src_bonus
+INCLUDE_DIR				=	include
+OBJ_DIR					=	obj
+OBJ_BONUS_DIR			=	obj_bonus
+BUILD_DIR				=	build
+LIBFT_DIR				=	libft
+JUMP_TABLE_UTILS_DIR	=	$(SRC_BONUS_DIR)/utils_jump_table
+CORE_DIR				=	$(SRC_BONUS_DIR)/core
+FORMAT_SPECIFIER_DIR	=	$(SRC_BONUS_DIR)/format_specifier
+HELPERS_DIR 			=	$(SRC_BONUS_DIR)/helpers
+PRECISION_DIR			=	$(SRC_BONUS_DIR)/precision
+WIDTH_DIR				=	$(SRC_BONUS_DIR)/width
+JUMP_TABLE_DIR			= 	$(SRC_BONUS_DIR)/jump_table
+
 PROGRAM = program
 # Terminal Colors
 define COLORS
@@ -68,14 +76,24 @@ $(eval $(COLORS))
 # ============================================================================ #
 
 # Standard implementation source files
-SRCS = $(wildcard $(SRC_DIR)/*.c)
+SRCS = $(SRC_DIR)/ft_format.c $(SRC_DIR)/ft_printf.c
 
 # Generate object files with preserved directory structure
 OBJS = $(patsubst $(SRC_DIR)/%.c, $(OBJ_DIR)/%.o, $(SRCS))
 
 # Bonus implementation source files
-SRCS_BONUS = $(wildcard $(SRC_BONUS_DIR)/*.c) \
-            $(wildcard $(SRC_BONUS_DIR)/*/*.c)
+SRCS_BONUS = 	$(JUMP_TABLE_UTILS_DIR)/ft_convert_wrappers_bonus.c $(JUMP_TABLE_UTILS_DIR)/ft_convert_wrappers_two_bonus.c \
+				$(JUMP_TABLE_UTILS_DIR)/ft_flag_wrappers_bonus.c $(JUMP_TABLE_UTILS_DIR)/ft_flag_wrappers_two_bonus.c \
+				$(JUMP_TABLE_DIR)/ft_init_bonus.c $(JUMP_TABLE_DIR)/ft_jump_flags_bonus.c \
+				$(CORE_DIR)/ft_flags_init_bonus.c $(CORE_DIR)/ft_parser_bonus.c $(CORE_DIR)/ft_printf_bonus.c\
+				$(FORMAT_SPECIFIER_DIR)/ft_char_bonus.c $(FORMAT_SPECIFIER_DIR)/ft_hex_bonus.c $(FORMAT_SPECIFIER_DIR)/ft_int_bonus.c \
+				$(FORMAT_SPECIFIER_DIR)/ft_percent_bonus.c $(FORMAT_SPECIFIER_DIR)/ft_ptr_bonus.c $(FORMAT_SPECIFIER_DIR)/ft_ptr_bonus.c \
+				$(FORMAT_SPECIFIER_DIR)/ft_str_bonus.c $(FORMAT_SPECIFIER_DIR)/ft_unsigned_bonus.c \
+				$(WIDTH_DIR)/ft_width_core_bonus.c $(WIDTH_DIR)/ft_width_hex_bonus.c $(WIDTH_DIR)/ft_width_int_bonus.c \
+				$(WIDTH_DIR)/ft_width_ptr_extra_bonus.c $(WIDTH_DIR)/ft_width_ptr_bonus.c \
+				$(PRECISION_DIR)/ft_precision_core_bonus.c $(PRECISION_DIR)/ft_precision_hex_bonus.c $(PRECISION_DIR)/ft_precision_int_bonus.c \
+				$(HELPERS_DIR)/ft_utils_int_bonus.c $(HELPERS_DIR)/ft_utils_ptr_bonus.c\
+				$(HELPERS_DIR)/ft_flag_instructions_bonus.c $(HELPERS_DIR)/ft_generic_utils_bonus.c $(HELPERS_DIR)/ft_utils_format_bonus.c
 
 # Generate bonus object files
 OBJS_BONUS = $(patsubst $(SRC_BONUS_DIR)/%.c, $(OBJ_BONUS_DIR)/%.o, $(SRCS_BONUS))
